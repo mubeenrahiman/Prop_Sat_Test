@@ -60,7 +60,7 @@ function getLocation() {
       element.innerText = "Location data unavailable.";
     }
   }, () => {
-    element.innerText = "Location permission denied or unavailable.";
+    element.innerText = "Unable to retrieve location.";
   });
 }
 
@@ -88,14 +88,10 @@ async function updateSensor(elementId, path, decimals = 1) {
 async function fetchSensorData() {
   await Promise.all([
     updateSensor("temperature", "DHT22/Temperature", 1),
-    updateSensor("humidity", "DHT22/Humidity", 1)
+    updateSensor("humidity", "DHT22/Humidity", 1),
+    updateSensor("pressure", "BMP180/Pressure", 2),
+    updateSensor("rain-status", "RainSensor/Status")
   ]);
-
-  const pressure = document.getElementById("pressure");
-  if (pressure) pressure.innerText = "Not connected";
-
-  const rain = document.getElementById("rain-status");
-  if (rain) rain.innerText = "Not connected";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
