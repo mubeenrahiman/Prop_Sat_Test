@@ -1,0 +1,187 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container {
+  padding: 10px;
+  background-color: #fff;
+  margin: 10vh auto;
+  max-width: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(46, 46, 58, 0.3);
+  text-align: center;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/*Logo contianer*/
+.logo-container {
+ padding-left: 50px;
+	padding-top: 50px;
+}
+.logo{
+	height:80px;
+	width:100;
+	padding: 10px;
+	
+}
+/* Centering Title */
+.title-container {
+  flex-grow: 1;
+  text-align: center;
+}
+.title-image {
+  width: 150px; /* Adjust width as needed */
+  display: block;
+  margin: 0 auto 10px auto; /* Center the image and add space below */
+}
+
+.title {
+  font-size: 2.5rem;
+  color: brown;
+  font-weight: bold;
+}
+
+/* Analog Clock */
+.clock-container {
+	
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5px; /* Moves clock 5px to the right */
+}
+
+.clock {
+	transform: rotate(270deg); 
+  position: relative;
+  background-color: #464655;
+  border: 0.6rem solid #fff;
+  border-radius: 50%;
+  height: 170px;
+  width: 170px;
+  box-shadow: 0 0 20px rgba(46, 46, 58, 0.2);
+}
+
+.axis {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Clock Hands */
+.hand {
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0%;
+  transform: rotate(0deg);
+  border-radius: 4px;
+}
+
+.hours {
+  width: 40%;
+  height: 6px;
+  background: #fff;
+}
+
+.minutes {
+  width: 50%;
+  height: 4px;
+  background: #ddd;
+}
+
+.seconds {
+  width: 55%;
+  height: 2px;
+  background: red;
+}
+
+/* Digital Date Box */
+.digital-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 12px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Sensor Data */
+.sensor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* First row - Temp, Humidity, Pressure */
+.sensor-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Second row - Rain Status */
+.rain-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.sensor-box {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  text-align: center;
+}
+
+.sensor-icon {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}

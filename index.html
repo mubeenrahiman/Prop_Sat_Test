@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prop Sat</title>
+ <link rel="icon" type="image/png" href="image/Zafilogo.png"> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<video autoplay loop muted playsinline id="bgVideo">
+    <source src="bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+  <div id="color-bkg"></div>
+  <div class="container">
+    
+    <!-- Header Section -->
+    <div class="header">
+      <div class="logo-container">
+        <img src="image/Zafilogo.png" alt="Prop Sat Logo" class="logo">
+      </div>
+      
+      <div class="title-container">
+		  <img src="image/sat.jpg" alt="Title Image" class="title-image">
+        <h1 class="title">PROP SAT</h1>
+      </div>
+      
+      <div class="clock-container">
+        <div class="clock">
+          <span class="axis"></span>
+          <span class="hand hours"></span>
+          <span class="hand minutes"></span>
+          <span class="hand seconds"></span>
+        </div>
+        <div class="digital-box">
+          <span id="date-display">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Location Section -->
+    <div id="location-container">
+      <h2> Location</h2>
+      <p id="location">Fetching location...</p>
+    </div>
+
+    <!-- Sensor Data Section -->
+    <div class="sensor-container">
+      <div class="sensor-row">
+        <div class="sensor-box">
+          <img src="image/temp.png" alt="Temperature Icon" class="sensor-icon">
+          <p><strong>Temperature:</strong> <span id="temperature">Loading...</span>°C</p>
+        </div>
+        <div class="sensor-box">
+          <img src="image/hum.png" alt="Humidity Icon" class="sensor-icon">
+          <p><strong>Humidity:</strong> <span id="humidity">Loading...</span>%</p>
+        </div>
+        <div class="sensor-box">
+          <img src="image/pressure.png" alt="Pressure Icon" class="sensor-icon">
+          <p><strong>Pressure:</strong> <span id="pressure">Loading...</span> hPa</p>
+        </div>
+      </div>
+      
+      <div class="rain-row">
+        <div class="sensor-box rain-box">
+          <img src="image/rain.png" alt="Rain Icon" class="sensor-icon">
+          <p><strong>Rain Status:</strong> <span id="rain-status">Loading...</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
